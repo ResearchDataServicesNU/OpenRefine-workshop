@@ -138,3 +138,5 @@ Some resources to learn more:
 * [A tutorial on data augmentation with WikiData](https://mdl.library.utoronto.ca/technology/tutorials/openrefine-augmenting-activity-2-using-reconciliation-services)
 * [Resources on reconciling data on scholarly journals](https://librarycarpentry.org/lc-open-refine/13-looking-up-data.html)
 * [Community document with useful OpenRefine GREL functions](https://docs.google.com/document/d/1sLklZKeWxD6AbyLQz7d4o7JLyfxEMkTjgPd5OVS9jSk/edit#heading=h.ielr0i6hygmb)
+
+The GREL regular expression I will copy-paste to fill one column based on the information in another column: `if(cells['listed as'].value.contains("Mr. "), if(value==null,"M", value), value)`
