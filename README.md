@@ -12,7 +12,7 @@ Follow your computer's prompt to install the software.
 
 OpenRefine can help with a wide range of data formats, including JSON and XML, but for this workshop we'll be focusing on "spreadsheety" data. If you have an Excel file, a CSV, or a TSV, you can use it to follow along with this workshop.
 
-To practice with the same dataset I'll be using in the workshop, download `arsenical-books.csv` from this GitHub repository. This data is taken from the University of Delaware's [Poison Book Project](https://sites.udel.edu/poisonbookproject/arsenical-books-database/). Save this file anywhere on your computer that will let you find it later.
+To practice with the same dataset I'll be using in the workshop, download `arsenical-books.csv` from this GitHub repository. (You can [click here](https://github.com/ResearchDataServicesNU/OpenRefine-workshop/blob/main/arsenical-books.csv) to view it and then find the "Download raw file" button.) This data is taken from the University of Delaware's [Poison Book Project](https://sites.udel.edu/poisonbookproject/arsenical-books-database/). Save this file anywhere on your computer that will let you find it later.
 
 ## Starting a "project"
 
@@ -41,6 +41,8 @@ Let's start by getting comfortable with "facets" and "filters," and the OpenRefi
 
 # Modifying ("cleaning") our data
 
+##Getting started with changes
+
 * Editing a single cell
    * Looking at the books owned by the Boston Athaneum, there's an inconsistency: a comma is used to separate two owners when it should be a semicolon
    * Hover your mouse over the relevant cell of data and an "edit" button will pop up.
@@ -65,7 +67,7 @@ Let's start by getting comfortable with "facets" and "filters," and the OpenRefi
    * In the Date numeric facet, uncheck everything but "non-numeric" to see which dates still can't be converted to numbers.
    * There are four years with "c." in front and three with "Nd" in front. Use any of the methods we've seen so far to remove those parts.
    
-# Undoing and redoing our data modification
+## Undoing and redoing our data modification
 
 Let's say we really regret losing our informations about which dates had brackets around them, but we still want to have access to the "cleaned" years.
 
@@ -87,7 +89,7 @@ Let's say we really regret losing our informations about which dates had bracket
 * Explore facets and filters to check that it worked as we expected!
    * In particular, make sure that our "Original date" column has the _whole_ original column in it, and not a faceted/filtered subset. (You can use "Reset all" in the Facet/Filter pane to make sure you have the entire dataset 'active'.)
    
-# More common use cases
+## More common use cases
 
 * Splitting imprint info into "City" and "Publisher" columns
    * Edit column > Split into several columns
@@ -106,7 +108,7 @@ Let's say we really regret losing our informations about which dates had bracket
    * Type `value.split(/,\s+/).reverse().join(" ")` (or really, copy-paste it)
    * Author > Edit cells > Common transformations > Collapse consecutive whitespace
       
-# Clustering!!
+## Clustering!!
 
 * Author > Edit cells > Cluster and edit...
    * Method: Key collision; Keying function: Fingerprint
@@ -119,9 +121,16 @@ Let's say we really regret losing our informations about which dates had bracket
       * The matches get "looser" when Radius gets bigger and Block chars gets smaller
       * Mouse over a set of names and click "browse cluster" for more context on whether a merge is justified
       
+# The practical business of saving your work
+
+* OpenRefine project are stored locally on your computer. You can return to a prior project by clicking the blue gem icon to get to the main menu, where you can choose "Open project" to resume prior work
+   * A handy link: [http://127.0.0.1:3333](http://127.0.0.1:3333) will also always take you to this OpenRefine 'main menu'
+* The "Export" functionality lets you get the cleaned data out in a wide range of formats
+   * It also includes an option to export "OpenRefine project archive to file", which is how you can move an in-progress OpenRefine environment between computers: at the 'main menu', use "Import project"
+
 # Data extension and augmentation (with WikiData)
 
-At this point, rather than asking you to follow along, I'll demonstrate some more complex features as inspiration for what OpenRefine can do.
+At this point, rather than asking you to follow along, I'll demonstrate some additional features on other datasets, as inspiration for what OpenRefine can do.
 
 Some resources to learn more:
 
