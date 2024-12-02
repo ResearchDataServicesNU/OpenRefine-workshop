@@ -41,7 +41,7 @@ Let's start by getting comfortable with "facets" and "filters," and the OpenRefi
 
 # Modifying ("cleaning") our data
 
-##Getting started with changes
+## Getting started with changes
 
 * Editing a single cell
    * Looking at the books owned by the Boston Athaneum, there's an inconsistency: a comma is used to separate two owners when it should be a semicolon
